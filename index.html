@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Ejercicio CSS</title>
+</head>
+<body >
+   
+    <h1>Formulario de Registro</h1>
+    <form>
+        <!-- Nombre Completo -->
+        <label>Nombre Completo:</label>
+        <input>
+        
+        <!-- Correo Electrónico -->
+        <label>Correo Electrónico:</label>
+        <input>
+        
+        <!-- Número de Teléfono -->
+        <label>Número de Teléfono:</label>
+        <input>
+        
+        <!-- Fecha de Nacimiento -->
+        <label>Fecha de Nacimiento:</label>
+        <input>
+        
+        <!-- Género -->
+        <fieldset>
+            <legend style="font-weight: bold;">Género:</legend>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <br>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <br>
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label>
+
+        </fieldset>
+        
+        <!-- País -->
+        <label for="pais" style="font-weight: bold;">País:</label>
+        <select id="pais" name="pais" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="mx">México</option>
+            <option value="es">España</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+            <option value="pe">Perú</option>
+        </select>
+        
+        <!-- Comentario -->
+        <label for="comentario" style="font-weight: bold;">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        
+        <!-- Términos y Condiciones -->
+        <div>
+            <label for="terminos">Acepto los términos y condiciones</label>
+            <input type="checkbox" id="terminos" name="terminos" required>
+            
+        </div>
+
+        <div>
+            
+            <!-- Iframe -->
+             <!--  <h3>Visita nuestro sitio web:</h3> -->
+             <h3 id="nues" >nuestro sitio web:</h3>
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/WM6ksN7wIhg?si=wnE05BhXzf05-kvS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+        </div>
+        
+        <!-- Botones -->
+        <div>
+            <button>Enviar</button>
+            <button>Limpiar</button>
+        </div>
+    </form>
+       
+
+</body>
+</html>
