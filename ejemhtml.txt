@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="csdos.css">
+</head>
+ <!-- Encabezado -->
+
+ <header>
+    <body>
+    <h1> Formulario de Registro</h1>
+    <p>Por favor, completa la información requerida.</p>
+    
+
+        <div class="menu-imagenes">
+            <!-- Primer elemento del menú -->
+            <figure>
+              <img src="./desarrollo.JPG" alt="Imagen 1">
+              <figcaption>Imagen 1</figcaption>
+            </figure>
+          
+            <!-- Segundo elemento del menú -->
+            <figure>
+              <img src="./Arquitectura.JPG" alt="Imagen 2">
+              <figcaption>Imagen 2</figcaption>
+            </figure>
+          </div>
+         
+
+</header>
+
+<!-- Navegación -->
+ <nav>
+    <ul> 
+        <li><a href="#formulario">Formulario</a></li>
+        <li><a href="#info">Información Adicional</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+
+</nav>
+    
+<!-- Contenido Principal -->
+<main>
+    <!-- Sección del Formulario -->
+    <section id="formulario">
+        <h2>Formulario de Registro</h2>
+        <form>
+            <!-- Campo de texto para nombre -->
+            <label for="Nombre completo">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <!-- Campo de correo electrónico -->
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email"> 
+
+             <!-- Campo de correo telefono -->
+             <label for="telefono">Telefono:</label>
+             <input type="telefono" id="telefono" name="telefono"> 
+
+             <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+<input type="date" id="fecha-nacimiento" name="fecha-nacimiento"> 
+
+<!-- Campo de contraseña -->
+<label for="password">Contraseña:</label>
+<input type="password" id="password" name="password" required>
+
+<!-- Campo de genero -->
+
+<p>Género:</p>
+<label>
+ <input type="radio" name="genero" value="masculino" required> Masculino
+</label>
+<label>
+ <input type="radio" name="genero" value="femenino"> Femenino
+</label>
+<label>
+ <input type="radio" name="genero" value="otro"> Otro
+</label>
+
+<!-- CODIGO PAIS -->
+
+<p>Pais:</p>
+<select id="codigoPais" name="codigoPais">
+<option value="+1">🇺🇸 +1 (USA)</option>
+<option value="+52">🇲🇽 +52 (México)</option>
+<option value="+34">🇪🇸 +34 (España)</option>
+<option value="+44">🇬🇧 +44 (Reino Unido)</option>
+<option value="+91">🇮🇳 +91 (India)</option>
+<!-- Agrega más opciones según sea necesario -->
+</select>
+
+
+<p> comentarios:</p>
+<textarea id="comentariosLargos" name="comentariosLargos" rows="10" cols="50" placeholder="Escribe aquí tu texto largo..."></textarea>
+
+   <!-- Botón de envío -->
+   <button type="submit">Registrarse</button>
+   nuevo... <button id="Registrarse">Registrarse</button>
+   nuevo ... id  <button type="submit">Enviar</button>
+
+  
+
+</form>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Para más información, visita <a href="https://talentotech2.com.co/bootcamps/">nuestro sitio web</a>.</p>
+</section>
+
+</main>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2024 TalentoTech.</p>
+</footer>
+
+
+</body>
+</html>

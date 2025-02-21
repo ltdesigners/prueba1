@@ -6,55 +6,134 @@
   <link rel="stylesheet" href="styles/styles.css">
   <title>Ejercicio CSS</title>
 </head>
+
+
+
 <body >
-   
+    <header>
+    <div id="titulo">
     <h1>Formulario de Registro</h1>
+    <p>Por favor, completa la información requerida.</p>
+        <!-- Primer elemento del menú -->
+        <!--<figure>
+          <img src="./desarrollo.JPG" alt="Imagen 1">
+          <figcaption>Imagen 1</figcaption>
+        </figure>
+      
+        Segundo elemento del menú -->
+        <!--<figure>
+          <img src="./Arquitectura.JPG" alt="Imagen 2">
+          <figcaption>Imagen 2</figcaption>
+        </figure>-->
+    </div>
+</header>
+<nav>
+    <ul> 
+        <li><a href="#formulario">Formulario</a></li>
+        <li><a href="#info">Información Adicional</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+
+</nav>
+<main>
+    <section id="formulario">
     <form>
+        <fieldset>
         <!-- Nombre Completo -->
-        <label>Nombre Completo:</label>
-        <input>
-        
-        <!-- Correo Electrónico -->
-        <label>Correo Electrónico:</label>
-        <input>
+
+        <div>
+            <label for="idEliminar">ID del registro: </label>
+            <input type="number" id="idEliminar" placeholder="Ingrese el ID">
+        </div>
+
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" size = "30" id="nombre">
+        </div>
         
         <!-- Número de Teléfono -->
-        <label>Número de Teléfono:</label>
-        <input>
+        <div>
+            <label for = "edad">Edad: </label>
+            <input type="number" name="edad" size = "30" id="edad">
+        </div>
         
         <!-- Fecha de Nacimiento -->
-        <label>Fecha de Nacimiento:</label>
-        <input>
-        
+        <div>
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" name="fecha" size="30" id="fecha">
+        </div>
+
+        <div>
+            <label for="lenguaje" >Lenguaje de Programación</label>
+            
+                <select type="text" name="lenguaje" id="lenguaje">
+                    <option value="python">Python</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="java">Java</option>
+                    <option value="ccharp">Ccharp</option>
+                    <option value="ruby">Ruby</option>
+                    </select>
+            </div>
+            <div>
+                <input type="hidden" id="registro-id">
+            </div>
         <!-- Género -->
-        <fieldset>
-            <legend style="font-weight: bold;">Género:</legend>
-            <input type="radio" id="masculino" name="genero" value="masculino">
-            <label for="masculino">Masculino</label>
-            <br>
-            <input type="radio" id="femenino" name="genero" value="femenino">
-            <label for="femenino">Femenino</label>
-            <br>
-            <input type="radio" id="otro" name="genero" value="otro">
-            <label for="otro">Otro</label>
+        
+    
+            
+
+<!-- Campo de genero -->
+            <!--<div id="genero">
+                <p>Género:</p>
+                <label>
+                    <input type="radio" name="genero" value="masculino" required> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="femenino"> Femenino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="otro"> Otro
+            </div>
+            <div id="Contrasena">
+                </label>
+                    <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>-->
+            
+            
+            
+            <!--<div>
+                <h2>Comentarios:</h2>
+                    <textarea id="comentariosLargos" name="comentariosLargos" rows="10" cols="50" placeholder="Escribe aquí tu texto largo..."></textarea>
+            </div>-->
+            
+            <h2>Tabla generada con JS</h2>
+            <div id="recibe_dato">
+                <table id="data-table">
+                    <thead>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Edad</th>
+                                <th>Fecha</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Pintar el cuerpo de la tabla acá-->
+
+                        
+                        </tbody>
+                        </table>
+
+           
+            </div>
+                
 
         </fieldset>
         
-        <!-- País -->
-        <label for="pais" style="font-weight: bold;">País:</label>
-        <select id="pais" name="pais" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="mx">México</option>
-            <option value="es">España</option>
-            <option value="ar">Argentina</option>
-            <option value="co">Colombia</option>
-            <option value="pe">Perú</option>
-        </select>
-        
-        <!-- Comentario -->
-        <label for="comentario" style="font-weight: bold;">Comentario:</label>
-        <textarea id="comentario" name="comentario" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-        
-        <!-- Términos y Condiciones -->
         <div>
             <label for="terminos">Acepto los términos y condiciones</label>
             <input type="checkbox" id="terminos" name="terminos" required>
@@ -71,12 +150,33 @@
         </div>
         
         <!-- Botones -->
-        <div>
-            <button>Enviar</button>
+        <div class="form_item">
+           <!--<input type="button" value="enviar" onclick="getdata()">-->
+            <button value="enviar" onclick="openData()">Enviar</button>
             <button>Limpiar</button>
+            <button value="borrar" onclick="deleteData()">Eliminar</button>
+            <button value = "editar" onclick="editRecord(1)">Editar</button>
+            <button value = "guardar" onclick="saveChanges()">Guardar</button>
         </div>
-    </form>
-       
+        
+            
+        
 
+    </form>
+</section>
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Para más información, visita <a href="https://talentotech2.com.co/bootcamps/">nuestro sitio web</a>.</p>
+</section>
+</main>
+<footer>
+    <p>&copy; 2024 TalentoTech.</p>
+</footer>  
+
+<script src="scripts/enviar.js"></script>
+<script src="scripts/recibir.js"></script>    
+<script src="scripts/borrar.js"></script>  }
+<script src="scripts/editar.js"></script> 
+<script src="scripts/guardar.js"></script> 
 </body>
 </html>
